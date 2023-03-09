@@ -8,8 +8,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Change directory
-        run: cd ios/fastlane
       - name: Echo current directory
         run: |
           pwd
