@@ -26,6 +26,8 @@ platform :ios do
       setup_ci
       match(type: "appstore", readonly: true, git_basic_authorization: 'eW91cl9naXRodWJfdXNlcm5hbWU6Z2hwX0piM0FVYjJTQWtxeHJvT0xXRksxdTlvbTd1WG42aDJYRzVFSQ==')  # see code signing guide for more information
       build_app(scheme: "Runner",
-                  workspace: "Runner.xcworkspace", silent: false, clean: true)
+                  workspace: "Runner.xcworkspace",
+                  silent: false,
+                  clean: true)
   end
 end
