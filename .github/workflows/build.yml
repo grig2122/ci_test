@@ -8,6 +8,10 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - run: ios/fastlane beta
+      - name: Change directory
+        run: cd ios
+      - name: Build iOS
+      - run: 
+          fastlane beta
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
