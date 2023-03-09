@@ -12,7 +12,5 @@ jobs:
         working-directory: ios/fastlane/
         run: 
           fastlane beta
-      - run: cat /Users/runner/work/ci_test/ci_test/ios/fastlane/README.md # Or log file include on outputs
-        if: always()
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
