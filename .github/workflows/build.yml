@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Change directory
-        run: cd ios
+        run: cd ios/fastlane
       - name: Build iOS
         run: 
           fastlane beta
