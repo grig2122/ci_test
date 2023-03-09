@@ -15,7 +15,6 @@ jobs:
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       - uses: actions/upload-artifact@v2
-      - name: Upload log file
         with:
           name: Runner-Runner.log
           path: /Users/runner/Library/Logs/gym/Runner-Runner.log
