@@ -10,7 +10,7 @@
 #     https://docs.fastlane.tools/plugins/available-plugins
 #
 
-# Uncomment the line if you want fastlane to automatically update itself
+# Uncomment the line if you want fastlane to automatically update itself test
 # update_fastlane
 
 default_platform(:ios)
