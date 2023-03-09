@@ -14,7 +14,6 @@ jobs:
           fastlane beta
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Runner-Runner.log
-          path: /Users/runner/Library/Logs/gym/Runner-Runner.log
+      - name: Logs
+        run: cat /Users/runner/Library/Logs/gym/Runner-dev.log # Or log file include on outputs
+        if: always()
