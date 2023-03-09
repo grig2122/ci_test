@@ -8,15 +8,6 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: List Xcode versions
-      - uses: actions/setup-xcode@v2
-      - name: Echo current directory
-        run: |
-          pwd
-      - name: Change directory
-        run: cd ios/fastlane/
-      - name: Change directory
-        run: ls
       - name: Build iOS
         working-directory: ios/fastlane/
         run: 
