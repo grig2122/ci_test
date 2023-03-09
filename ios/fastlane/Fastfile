@@ -19,6 +19,12 @@ platform :ios do
   desc "Description of what the lane does"
   lane :beta do
     # add actions here: https://docs.fastlane.tools/actions
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      code_sign_identity: "iPhone Distribution",
+      sdk: "iphoneos*",
+      profile_name: "match AppStore com.ci.test.ciTest",
+      )
        disable_automatic_code_signing(
         profile_name: "match AppStore com.ci.test.ciTest",
         code_sign_identity: 'iPhone Distribution'
