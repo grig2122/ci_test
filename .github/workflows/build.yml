@@ -10,6 +10,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Change directory
         run: cd ios/fastlane
+      - name: Echo current directory
+        run: |
+          pwd
       - name: Build iOS
         run: 
           fastlane beta
