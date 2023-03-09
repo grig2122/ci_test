@@ -8,6 +8,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+      - name: List Xcode versions
+      - uses: actions/setup-xcode@v2
       - name: Echo current directory
         run: |
           pwd
