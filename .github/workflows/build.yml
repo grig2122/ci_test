@@ -11,7 +11,7 @@ jobs:
       - name: Change directory
         run: cd ios
       - name: Build iOS
-      - run: 
+        run: 
           fastlane beta
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
