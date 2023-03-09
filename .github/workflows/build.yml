@@ -11,9 +11,6 @@ jobs:
       - name: Build iOS
         working-directory: ios/fastlane/
         run: 
-          fastlane beta
+          fastlane beta --verbose
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-      - name: Logs
-        run: cat /Users/runner/Library/Logs/gym/Runner-dev.log # Or log file include on outputs
-        if: always()
