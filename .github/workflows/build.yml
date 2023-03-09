@@ -12,6 +12,8 @@ jobs:
         run: |
           pwd
       - name: Change directory
+        run: cd ios/fastlane/
+      - name: Change directory
         run: ls
       - name: Build iOS
         run: 
