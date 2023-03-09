@@ -19,6 +19,11 @@ platform :ios do
   desc "Description of what the lane does"
   lane :beta do
     # add actions here: https://docs.fastlane.tools/actions
+      update_code_signing_settings(
+         use_automatic_signing: false,
+         code_sign_identity: "iPhone Distribution",
+         profile_name: "match AppStore com.ci.test.ciTest",
+         )
       setup_ci
       match(type: "appstore", readonly: true, git_basic_authorization: 'eW91cl9naXRodWJfdXNlcm5hbWU6Z2hwX0piM0FVYjJTQWtxeHJvT0xXRksxdTlvbTd1WG42aDJYRzVFSQ==')  # see code signing guide for more information
       build_app(scheme: "Runner",
