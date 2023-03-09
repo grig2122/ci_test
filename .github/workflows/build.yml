@@ -14,5 +14,8 @@ jobs:
           fastlane beta
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-      - name: Logs
-        run: cat /Users/runner/Library/Logs/gym/Runner-Runner.log
+      - name: Upload log file
+        uses: actions/upload-artifact@v2
+        with:
+          name: Runner-Runner.log
+          path: /Users/runner/Library/Logs/gym/Runner-Runner.log
