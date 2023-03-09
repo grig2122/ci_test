@@ -11,6 +11,8 @@ jobs:
       - name: Echo current directory
         run: |
           pwd
+      - name: Change directory
+        run: ls
       - name: Build iOS
         run: 
           fastlane beta
