@@ -12,7 +12,7 @@ jobs:
         working-directory: ios/fastlane/
         run: 
           fastlane beta
-      - name: Logs
-        run: cat /Users/runner/Library/Logs/gym/Runner-Runner.log
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      - name: Logs
+        run: cat /Users/runner/Library/Logs/gym/Runner-Runner.log
