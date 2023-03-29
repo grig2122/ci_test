@@ -17,3 +17,4 @@ jobs:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       - name: Log
         run: cat /Users/runner/Library/Logs/gym/Runner-Runner.log
+        if: always()
