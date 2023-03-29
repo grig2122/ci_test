@@ -16,10 +16,4 @@ jobs:
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       - name: Log
-        run: cat /Users/runner/work/ci_test/ci_test/ios/fastlane/README.md # Or log file include on outputs
-        if: always()
-      - name: Clean up keychain and provisioning profile
-        if: ${{ always() }}
-        run: |
-         security delete-keychain /Users/runner/Library/Keychains/fastlane_tmp_keychain-db
-         rm /Users/runner/Library/MobileDevice/Provisioning Profiles/44ed2608-2617-433d-8e5a-84eba69be00f.mobileprovision
+        run: cat /Users/runner/Library/Logs/gym/Runner-Runner.log
