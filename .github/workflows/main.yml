@@ -22,4 +22,4 @@ jobs:
         if: ${{ always() }}
         run: |
          security delete-keychain /Users/runner/Library/Keychains/fastlane_tmp_keychain-db
-         rm ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision
+         rm /Users/runner/Library/MobileDevice/Provisioning Profiles/44ed2608-2617-433d-8e5a-84eba69be00f.mobileprovision
