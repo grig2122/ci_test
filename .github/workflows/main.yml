@@ -12,7 +12,7 @@ jobs:
       - name: Build iOS
         working-directory: ios/fastlane/
         run: 
-          fastlane beta
+          fastlane beta --verbose
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       - name: Log
