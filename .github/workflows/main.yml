@@ -10,16 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build iOS
         working-directory: ios/fastlane/
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          cd android && bundle install
-          cd ../ios && bundle install
-      - name: Build and test
-        run: |
-          flutter build ios --release --no-codesign
-          cd ios 
-          bundle exec fastlane beta
+        run:
+          fastlane beta --verbose
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       - name: Log
