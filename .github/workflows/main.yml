@@ -22,8 +22,9 @@ jobs:
 
       - name: Build iOS
         working-directory: ios/fastlane/
-        run:
-          fastlane beta --verbose
+        run: |
+          flutter build ios --release --no-codesign
+          bundle exec fastlane beta --verbose
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
 
