@@ -30,5 +30,6 @@ platform :ios do
                   workspace: "Runner.xcworkspace",
                   silent: false,
                   clean: true)
+      upload_to_testflight
   end
 end
